@@ -1,0 +1,13 @@
+.mainScientific {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.img {
+  width: 240px;
+  height: 160px;
+  border-style: solid;
+  border-color: black;
+  margin-right: 20px;
+}

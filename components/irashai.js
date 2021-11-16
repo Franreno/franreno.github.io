@@ -26,7 +26,9 @@ export default function Irashai() {
                     <Tab label="Blog"/>
                 </Tabs>
             </AppBar>
+        </div>
 
+        <div className={styles.contentContainer}>
             <TabPanel index={0} value={value}>
                 <h3>Teste About</h3>
             </TabPanel>
@@ -38,9 +40,8 @@ export default function Irashai() {
             <TabPanel index={2} value={value}>
                 <h3>Teste Blog</h3>
             </TabPanel>
-
         </div>
-    
+
         </>
     )
 }

@@ -8,6 +8,12 @@
   background-size: cover;
 }
 
+.contentContainer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
 .title {
   color: rgb(214, 201, 247);
 }
