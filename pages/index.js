@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <link rel="preload" href="/public/fonts/FiraCode-Regular.ttf" as="font" crossOrigin=""/>
+        <link rel="preload" href="/fonts/FiraCode-Regular.ttf" as="font" crossOrigin=""/>
         <title>
           Personal Projects
         </title>
