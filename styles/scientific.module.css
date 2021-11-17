@@ -1,6 +1,17 @@
-.mainScientific {
-  padding: 20px;
+.dropDownDiv {
+    padding: 20px;
+}
+
+.mainLinkContainers {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkContainers {
+  padding: 20px;
   align-items: center;
 }
 
@@ -9,5 +20,5 @@
   height: 160px;
   border-style: solid;
   border-color: black;
-  margin-right: 20px;
+  cursor: pointer;
 }

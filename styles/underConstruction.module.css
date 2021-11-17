@@ -1,0 +1,16 @@
+.MainDiv {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.teaImg {
+    justify-self: center;
+    width: 50%;
+}
+
+.subtitle{
+    color: rgb(214, 201, 247);
+}
