@@ -71,6 +71,30 @@ export default function Scientific() {
 
             </div>
 
+
+            <h2 className={styles.texts}> Comparação dos dados </h2>
+            <div className={styles.mainLinkContainers}>
+
+            <Link href={"/static/comparison/Diff.html"}>
+                <div className={styles.linkContainers}>
+                    <img src={"images/comparison/diff.png"} className={styles.img}></img>
+                </div>
+            </Link>
+
+            <Link href={"/static/comparison/Porcentagem.html"}>
+                <div className={styles.linkContainers}>
+                    <img src={"images/comparison/porcentagem.png"} className={styles.img}></img>
+                </div>
+            </Link>
+
+            <Link href={"/static/comparison/Bar.html"}>
+                <div className={styles.linkContainers}>
+                    <img src={"images/comparison/bar.png"} className={styles.img}></img>
+                </div>
+            </Link>
+
+            </div>
+
         </>
     )
 }
