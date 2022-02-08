@@ -2,6 +2,19 @@
     padding: 20px;
 }
 
+.mainContainers {
+  margin: 2%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.paddingContainer{
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+
 .mainLinkContainers {
   display: flex;
   flex-direction: row;
@@ -33,4 +46,11 @@
 
 .texts {
   color: rgb(214, 201, 247);
+  word-wrap: break-word;
+}
+
+.pTextContainer{
+  width: 20%;
+  height: 5%;
+  text-align: justify;
 }

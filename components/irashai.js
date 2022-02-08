@@ -6,6 +6,7 @@ import React from 'react';
 import TabPanel from '../components/tabPanel';
 import Scientific from './scientific';
 import UnderConstruction from './underConstruction';
+import HeaderTitle from './headerTitle';
 
 export default function Irashai() {
 
@@ -18,10 +19,8 @@ export default function Irashai() {
     return (
         <>
             <div className={styles.mainContainer}>
-                <div className={styles.titleDiv}>
-                    <h2 className={styles.title}>いらっしゃい</h2>
-                    <img src={"/images/teaGif.gif"} className={styles.titleTeaGif}></img>
-                </div>
+
+                <HeaderTitle/>
 
                 <AppBar position="static" style={{ background: '#3f2372' }}>
                     <Tabs centered value={value} onChange={selectTab}>
