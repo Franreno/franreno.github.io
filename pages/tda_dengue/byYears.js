@@ -1,59 +1,46 @@
 import styles from '../../styles/scientific.module.css'
 import Link from 'next/link'
-import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import React from 'react';
 import HeaderTitle from '../../components/headerTitle';
 
 
 export default function mapperByYears() {
 
-    const years = ['2010', '2011', '2012', '2013', '2014', '2015']
-    const overlap = ['0.15', '0.3', '0.45']
-
-    const [mapperPath, setMapperPath] = React.useState("2010")
-    const [mapperTriggerName, setMapperTriggerName] = React.useState("2010")
-
-    const updateMapperStates = (newValue) => {
-        setMapperPath(newValue)
-        setMapperTriggerName(newValue)
-    }
+    const years = ['2011', '2012', '2013', '2014', '2015']
 
     return (
         <>
-            <HeaderTitle/>
+            <HeaderTitle />
+
             <div className={styles.mainContainers}>
 
-
-            <h2 className={styles.texts}> Mapper dos casos de Dengue por ano </h2>
-            <div className={styles.dropDownDiv}>
-                <DropdownMenu.Root className={"Root"}>
-                    <DropdownMenu.Trigger className={"trigger"}>{mapperTriggerName}</DropdownMenu.Trigger>
-                    <DropdownMenu.Content className={"content"} >
-                        <DropdownMenu.Item className={"item"} onSelect={() => updateMapperStates(years[0])}>{years[0]}</DropdownMenu.Item>
-                        <DropdownMenu.Item className={"item"} onSelect={() => updateMapperStates(years[1])}>{years[1]}</DropdownMenu.Item>
-                        <DropdownMenu.Item className={"item"} onSelect={() => updateMapperStates(years[2])}>{years[2]}</DropdownMenu.Item>
-                        <DropdownMenu.Item className={"item"} onSelect={() => updateMapperStates(years[3])}>{years[3]}</DropdownMenu.Item>
-                        <DropdownMenu.Item className={"item"} onSelect={() => updateMapperStates(years[4])}>{years[4]}</DropdownMenu.Item>
-                        <DropdownMenu.Item className={"item"} onSelect={() => updateMapperStates(years[5])}>{years[5]}</DropdownMenu.Item>
-                    </DropdownMenu.Content>
-                </DropdownMenu.Root>
-            </div>
+                <h1 className={styles.texts}> Mappers por ano </h1>
+                <p className={styles.texts}>Referência: <a href='https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0255584'> Topological data analysis model for the spread of the coronavirus</a> </p>
+                <div className={styles.mainLinkContainers}>
 
 
-            <div className={styles.mainLinkContainers}>
-                {
-                    overlap.map((overlap) => {
-                        return (
-                            <div className={styles.linkContainers}>
-                                <h3 className={styles.texts}>Overlap = {overlap}</h3>
-                                <Link href={"/static/mappers/years/" + mapperPath + "/overlap=" + overlap + ".html"}>
-                                    <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
-                                </Link>
-                            </div>
-                        )
-                    })
-                }
-            </div>
+
+                    <div className={styles.linkContainers}>
+                        <h3 className={styles.texts}> 2010 </h3>
+                        <Link href={"analise2010"}>
+                            <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
+                        </Link>
+                    </div>
+
+                    {
+
+                        years.map((year) => {
+                            return (
+                                <div className={styles.linkContainers}>
+                                    <h3 className={styles.texts}> {year} </h3>
+                                    <Link href={"/static/mappers/years/" + year + "DengueData.html"}>
+                                        <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
+                                    </Link>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
 
             </div>
         </>
