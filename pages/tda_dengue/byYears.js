@@ -6,7 +6,9 @@ import HeaderTitle from '../../components/headerTitle';
 
 export default function mapperByYears() {
 
-    const years = ['2011', '2012', '2013', '2014', '2015']
+    const years = ['2010', '2011', '2012', '2013', '2014', '2015']
+
+    const years_without_2010 = years.slice(1)
 
     return (
         <>
@@ -16,7 +18,12 @@ export default function mapperByYears() {
 
                 <h1 className={styles.texts}> Mappers por ano </h1>
                 <p className={styles.texts}>Referência: <a href='https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0255584'> Topological data analysis model for the spread of the coronavirus</a> </p>
+
+                <br></br>
+                <h2 className={styles.texts}> Local + Casos de dengue por semana + Semana </h2>
+
                 <div className={styles.mainLinkContainers}>
+
 
 
 
@@ -29,11 +36,62 @@ export default function mapperByYears() {
 
                     {
 
+                        years_without_2010.map((year) => {
+                            return (
+                                <div className={styles.linkContainers}>
+                                    <h3 className={styles.texts}> {year} </h3>
+                                    <Link href={"/static/mappers/years/" + year + '/' + year + "DengueData.html"}>
+                                        <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
+                                    </Link>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+
+                <h2 className={styles.texts}> Local + Casos de dengue por semana + Semana + IDHM</h2>
+
+                <div className={styles.mainLinkContainers}>
+                    {
                         years.map((year) => {
                             return (
                                 <div className={styles.linkContainers}>
                                     <h3 className={styles.texts}> {year} </h3>
-                                    <Link href={"/static/mappers/years/" + year + "DengueData.html"}>
+                                    <Link href={"/static/mappers/years/" + year + '/' + year + "DengueData-IDHM.html"}>
+                                        <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
+                                    </Link>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+
+                <h2 className={styles.texts}> Local + Casos de dengue por semana + Semana + PIB</h2>
+
+                <div className={styles.mainLinkContainers}>
+                    {
+                        years.map((year) => {
+                            return (
+                                <div className={styles.linkContainers}>
+                                    <h3 className={styles.texts}> {year} </h3>
+                                    <Link href={"/static/mappers/years/" + year + '/' + year + "DengueData-PIB.html"}>
+                                        <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
+                                    </Link>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+
+                <h2 className={styles.texts}> Local + Casos de dengue por semana + Semana + IDHM + PIB</h2>
+
+                <div className={styles.mainLinkContainers}>
+                    {
+                        years.map((year) => {
+                            return (
+                                <div className={styles.linkContainers}>
+                                    <h3 className={styles.texts}> {year} </h3>
+                                    <Link href={"/static/mappers/years/" + year + '/' + year + "DengueData-IDHM-PIB.html"}>
                                         <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
                                     </Link>
                                 </div>
