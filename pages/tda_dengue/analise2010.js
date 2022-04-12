@@ -16,7 +16,7 @@ export default function analise2010() {
                 <div className={styles.mainLinkContainers}>
                     <div className={styles.linkContainers}>
                         <h3 className={styles.texts}> Mapper 2010 </h3>
-                        <Link href={"/static/mappers/years/2010DengueData.html"}>
+                        <Link href={"/static/mappers/years/2010/2010DengueData.html"}>
                             <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
                         </Link>
                     </div>
