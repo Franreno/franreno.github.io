@@ -14,6 +14,35 @@ export default function mapperByYears() {
         <>
             <HeaderTitle />
 
+        <h2 className={styles.texts}> Dados Socioeconômicos </h2>
+
+        <div className={styles.mainLinkContainers}>
+
+        
+            <div className={styles.linkContainers}>
+                <h3 className={styles.texts}> Projeção PCA </h3>
+                <Link href={"/static/mappers/social/2014DenguePCA"}>
+                    <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
+                </Link>
+            </div>
+
+            <div className={styles.linkContainers}>
+                <h3 className={styles.texts}> Projeção 3 coordenadas </h3>
+                <Link href={"/static/mappers/social/2014DenguePIB-RENDA-CASOS.html"}>
+                    <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
+                </Link>
+            </div>
+
+            <div className={styles.linkContainers}>
+                <h3 className={styles.texts}> Sem projeção </h3>
+                <Link href={"/static/mappers/social/2014DengueSemProjecao.html"}>
+                    <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
+                </Link>
+            </div>
+
+
+        </div>
+        
             <div className={styles.mainContainers}>
 
                 <h1 className={styles.texts}> Mappers por ano </h1>
@@ -102,35 +131,6 @@ export default function mapperByYears() {
 
             </div>
 
-            <h2 className={styles.texts}> Local + Casos de dengue por semana + Semana </h2>
-
-    <div className={styles.mainLinkContainers}>
-
-    
-        <div className={styles.linkContainers}>
-            <h3 className={styles.texts}> Projeção PCA </h3>
-            <Link href={"/static/mappers/social/2014DenguePCA"}>
-                <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
-            </Link>
-        </div>
-
-        <div className={styles.linkContainers}>
-            <h3 className={styles.texts}> Projeção 3 coordenadas </h3>
-            <Link href={"/static/mappers/social/2014DenguePIB-RENDA-CASOS.html"}>
-                <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
-            </Link>
-        </div>
-
-        <div className={styles.linkContainers}>
-            <h3 className={styles.texts}> Sem projeção </h3>
-            <Link href={"/static/mappers/social/2014DengueSemProjecao.html"}>
-                <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
-            </Link>
-        </div>
-
-
-
-    </div>
 
         </>
     )
