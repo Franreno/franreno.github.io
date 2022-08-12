@@ -19,6 +19,38 @@ export default function mapperByYears() {
 
                 <div className={styles.mainLinkContainers}>
 
+                    <div className={styles.linkContainers}>
+                        <h3 className={styles.texts}> Projeção PCA </h3>
+                        <Link href={"/static/mappers/social/2014DengueSemPIBSemBuzios_PCA"}>
+                            <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
+                        </Link>
+                    </div>
+
+                    <div className={styles.linkContainers}>
+                        <h3 className={styles.texts}> Projeção 3 coordenadas </h3>
+                        <Link href={"/static/mappers/social/2014DengueSemPIBSemBuzios_RendaCasosSemana.html"}>
+                            <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
+                        </Link>
+                    </div>
+
+                    <div className={styles.linkContainers}>
+                        <h3 className={styles.texts}> Sem projeção </h3>
+                        <Link href={"/static/mappers/social/2014DengueSemPIBSemBuzios_SemProj.html"}>
+                            <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
+                        </Link>
+                    </div>
+
+
+                </div>
+
+
+
+
+                <h2 className={styles.texts}> Dados Socioeconômicos </h2>
+
+                <div className={styles.mainLinkContainers}>
+
+
 
                     <div className={styles.linkContainers}>
                         <h3 className={styles.texts}> Projeção PCA </h3>
@@ -37,38 +69,6 @@ export default function mapperByYears() {
                     <div className={styles.linkContainers}>
                         <h3 className={styles.texts}> Sem projeção </h3>
                         <Link href={"/static/mappers/social/2014DengueSemProjecao.html"}>
-                            <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
-                        </Link>
-                    </div>
-
-
-                </div>
-
-
-
-
-                <h2 className={styles.texts}> Dados Socioeconômicos </h2>
-
-                <div className={styles.mainLinkContainers}>
-
-
-                    <div className={styles.linkContainers}>
-                        <h3 className={styles.texts}> Projeção PCA </h3>
-                        <Link href={"/static/mappers/social/2014DengueSemPIBSemBuzios_PCA"}>
-                            <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
-                        </Link>
-                    </div>
-
-                    <div className={styles.linkContainers}>
-                        <h3 className={styles.texts}> Projeção 3 coordenadas </h3>
-                        <Link href={"/static/mappers/social/2014DengueSemPIBSemBuzios_RendaCasosSemana.html"}>
-                            <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
-                        </Link>
-                    </div>
-
-                    <div className={styles.linkContainers}>
-                        <h3 className={styles.texts}> Sem projeção </h3>
-                        <Link href={"/static/mappers/social/2014DengueSemPIBSemBuzios_SemProj.html"}>
                             <img src={"/images/clusterLogo.png"} className={styles.clusterImg}></img>
                         </Link>
                     </div>
