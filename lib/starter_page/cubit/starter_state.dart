@@ -10,5 +10,3 @@ class StarterLoading extends StarterState {}
 class StarterHome extends StarterState {}
 
 class StarterProjects extends StarterState {}
-
-class StarterBlog extends StarterState {}

@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:personal_site/blog/view/blog.dart';
 import 'package:personal_site/core/config.dart';
 import 'package:personal_site/core/widgets/bloc_builder_error_container.dart';
 import 'package:personal_site/home/view/home.dart';
@@ -31,8 +30,6 @@ class StarterPage extends StatelessWidget {
                     return HomeWidget();
                   } else if (state is StarterProjects) {
                     return ProjectsWidget();
-                  } else if (state is StarterBlog) {
-                    return BlogWidget();
                   }
 
                   return BlocBuilderErrorContainer(

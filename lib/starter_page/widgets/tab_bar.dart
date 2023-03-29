@@ -38,22 +38,16 @@ class TabBarRowButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool home = false, projects = false, blog = false;
+    bool home = false, projects = false;
 
     return BlocBuilder<StarterCubit, StarterState>(
       builder: (context, state) {
         if (state is StarterHome) {
           home = true;
           projects = false;
-          blog = false;
         } else if (state is StarterProjects) {
           home = false;
           projects = true;
-          blog = false;
-        } else if (state is StarterBlog) {
-          home = false;
-          projects = false;
-          blog = true;
         }
 
         return Row(
@@ -77,16 +71,6 @@ class TabBarRowButtons extends StatelessWidget {
                 selected: projects,
                 onPressed: () =>
                     context.read<StarterCubit>().emitProjectState(),
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: TabBarButton(
-                title: "Blog",
-                icon: Icons.document_scanner_outlined,
-                iconSelected: Icons.document_scanner,
-                selected: blog,
-                onPressed: () => context.read<StarterCubit>().emitBlogState(),
               ),
             ),
           ],

@@ -8,5 +8,4 @@ class StarterCubit extends Cubit<StarterState> {
 
   emitHomeState() => emit(StarterHome());
   emitProjectState() => emit(StarterProjects());
-  emitBlogState() => emit(StarterBlog());
 }

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 
 import 'core/config.dart';
 import 'core/themes/dark_theme.dart';
 import 'core/themes/light_theme.dart';
-import 'starter_page/cubit/starter_cubit.dart';
-import 'starter_page/view/starter_page.dart';
+import 'home/view/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,9 +33,12 @@ class _MyAppState extends State<MyApp> {
       theme: lightTheme(),
       darkTheme: darkTheme(),
       themeMode: currentTheme.currentTheme(),
-      home: BlocProvider(
-        create: (context) => StarterCubit()..emitHomeState(),
-        child: const StarterPage(),
+      home: Scaffold(
+        body: const HomeWidget(),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () => currentTheme.swichTheme(),
+          child: const Icon(Icons.brightness_4_sharp),
+        ),
       ),
       debugShowCheckedModeBanner: false,
     );
