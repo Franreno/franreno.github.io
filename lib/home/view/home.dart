@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../core/image_urls.dart';
+import '../widgets/tools_cards.dart';
+
 class HomeWidget extends StatelessWidget {
   const HomeWidget({super.key});
 
@@ -8,10 +11,10 @@ class HomeWidget extends StatelessWidget {
     return SizedBox(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
-      child: const Row(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: const [
           Expanded(flex: 1, child: PersonalProfileWidget()),
           Expanded(flex: 3, child: PersonalProfileDataWidget()),
         ],
@@ -70,12 +73,15 @@ class PersonalProfileWidget extends StatelessWidget {
           ),
           const SizedBox(height: 15),
           // * Name
-          const Column(
+          Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text("Francisco Reis Nogueira",
-                  style: TextStyle(fontSize: 28, fontFamily: "RobotoMono")),
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+              Text(
+                "Francisco Reis Nogueira",
+                style: TextStyle(fontSize: 22, fontFamily: "RobotoMono"),
+                textAlign: TextAlign.center,
+              ),
               // * Additional data
               SizedBox(height: 5),
               Text(
@@ -85,18 +91,23 @@ class PersonalProfileWidget extends StatelessWidget {
               ),
             ],
           ),
-          AnimatedPositioned(
-            top: 50.0,
-            duration: const Duration(seconds: 2),
-            curve: Curves.fastOutSlowIn,
-            child: Container(
-              width: MediaQuery.of(context).size.height * 0.1,
-              height: MediaQuery.of(context).size.height * 0.1,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/images/nyan.gif'),
-                ),
-              )ed,
+          const SizedBox(height: 20),
+          const Text(
+            "Tools and languages",
+            style: TextStyle(fontSize: 18, fontFamily: "RobotoMono"),
+          ),
+          //SkillsWidgetCard(
+          //  imageUrl: pythonLogo,
+          //  title: 'Python',
+          //),
+          Expanded(child: Container()),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.12,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                alignment: Alignment.centerLeft,
+                image: AssetImage('assets/images/kirby.gif'),
+              ),
             ),
           ),
         ],
