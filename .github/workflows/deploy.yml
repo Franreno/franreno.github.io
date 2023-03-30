@@ -15,7 +15,7 @@ jobs:
         with:
           channel: stable
       - run: flutter pub get
-      - run: flutter build web
+      - run: flutter build web --web-renderer html
 
       - uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
