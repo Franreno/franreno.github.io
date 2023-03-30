@@ -23,17 +23,6 @@ class HomeWidget extends StatelessWidget {
   }
 }
 
-class PersonalProfileDataWidget extends StatelessWidget {
-  const PersonalProfileDataWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
-
 class PersonalProfileWidget extends StatelessWidget {
   const PersonalProfileWidget({
     super.key,
@@ -96,10 +85,31 @@ class PersonalProfileWidget extends StatelessWidget {
             "Tools and languages",
             style: TextStyle(fontSize: 18, fontFamily: "RobotoMono"),
           ),
-          //SkillsWidgetCard(
-          //  imageUrl: pythonLogo,
-          //  title: 'Python',
-          //),
+          CardsCollection(
+            children: [
+              SkillsWidgetCard(imageUrl: pythonLogo, title: 'Python'),
+              SkillsWidgetCard(imageUrl: flutterLogo, title: 'Flutter'),
+              SkillsWidgetCard(imageUrl: typescriptLogo, title: 'Typescript'),
+            ],
+          ),
+          const SizedBox(height: 10),
+          CardsCollection(
+            children: [
+              SkillsWidgetCard(imageUrl: firebaseLogo, title: 'Firebase'),
+              SkillsWidgetCard(imageUrl: gitLogo, title: 'Git'),
+              SkillsWidgetCard(imageUrl: linuxLogo, title: 'Linux'),
+            ],
+          ),
+          const SizedBox(height: 20),
+          const Text(
+            "🤝🏻 Connect with me",
+            style: TextStyle(fontSize: 18, fontFamily: "RobotoMono"),
+          ),
+          const SizedBox(height: 10),
+          const Text(
+            "franreno4<at>gmail<dot>com",
+            style: TextStyle(fontSize: 12, fontFamily: "RobotoMono"),
+          ),
           Expanded(child: Container()),
           Container(
             height: MediaQuery.of(context).size.height * 0.12,
@@ -113,5 +123,38 @@ class PersonalProfileWidget extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class CardsCollection extends StatelessWidget {
+  const CardsCollection({
+    super.key,
+    required this.children,
+  });
+
+  final List<SkillsWidgetCard> children;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height * 0.05,
+      child: ListView(
+        padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+        scrollDirection: Axis.horizontal,
+        children: children,
+      ),
+    );
+  }
+}
+
+class PersonalProfileDataWidget extends StatelessWidget {
+  const PersonalProfileDataWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
