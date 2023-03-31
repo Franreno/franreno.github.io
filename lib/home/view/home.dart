@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personal_site/home/widgets/content.dart';
 
 import '../../core/image_urls.dart';
 import '../widgets/tools_cards.dart';
@@ -14,9 +15,9 @@ class HomeWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          Expanded(flex: 1, child: PersonalProfileWidget()),
-          Expanded(flex: 3, child: PersonalProfileDataWidget()),
+        children: [
+          const Expanded(flex: 1, child: PersonalProfileWidget()),
+          const Expanded(flex: 3, child: PersonalProfileDataWidget()),
         ],
       ),
     );
@@ -153,8 +154,25 @@ class PersonalProfileDataWidget extends StatelessWidget {
     super.key,
   });
 
+  //final ScrollController _scrollController = ScrollController();
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          width: MediaQuery.of(context).size.height * 0.5,
+          height: MediaQuery.of(context).size.height * 0.5,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/kirby2.gif"),
+            ),
+          ),
+        ),
+        const Text("Under construction",
+            style: TextStyle(fontSize: 28, fontFamily: "RobotoMono")),
+      ],
+    );
   }
 }
