@@ -10,14 +10,25 @@ jobs:
   host_sandbox:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: subosito/flutter-action@v2
-        with:
-          channel: stable
-      - run: flutter pub get
-      - run: flutter build web --web-renderer html
+      - uses: actions/checkout@v4
 
-      - uses: JamesIves/github-pages-deploy-action@4.1.5
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Next.js
+        run: npm run build
+
+      - name: Export static site
+        run: npm run export
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.6.1
         with:
           branch: gh-pages
-          folder: build/web
+          folder: out
