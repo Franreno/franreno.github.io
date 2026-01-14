@@ -1,0 +1,23 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- Under construction cone -->
+  <g>
+    <!-- Base -->
+    <rect x="8" y="40" width="32" height="4" fill="#333333" stroke="#666666" stroke-width="1"/>
+
+    <!-- Cone body with stripes -->
+    <polygon points="24,8 12,40 36,40" fill="#ff6b00"/>
+
+    <!-- Orange stripes -->
+    <polygon points="24,8 20,16 28,16" fill="#ffaa00"/>
+    <polygon points="18,24 16,28 32,28 30,24" fill="#ffaa00"/>
+    <polygon points="14,36 13,40 35,40 34,36" fill="#ffaa00"/>
+
+    <!-- Highlights -->
+    <polygon points="24,8 25,9 27,16 28,16" fill="#ffcc00" opacity="0.6"/>
+
+    <!-- Animated warning blink -->
+    <circle cx="24" cy="12" r="2" fill="#ffff00">
+      <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
