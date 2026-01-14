@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
+import { EasterEggsLoader } from "@/components/EasterEggsLoader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <EasterEggsLoader />
         <div className="min-h-screen flex flex-col">
           <Navigation />
           <main className="flex-1 container-y2k py-8">
@@ -40,24 +42,28 @@ export default function RootLayout({
             <img
               src="/retro-icons/star.svg"
               alt=""
+              aria-hidden="true"
               className="absolute top-4 left-8 w-4 h-4 opacity-30"
               style={{ animation: 'float 4s ease-in-out infinite' }}
             />
             <img
               src="/retro-icons/star.svg"
               alt=""
+              aria-hidden="true"
               className="absolute top-8 right-12 w-4 h-4 opacity-30"
               style={{ animation: 'float 4s ease-in-out infinite 2s' }}
             />
             <img
               src="/retro-icons/star.svg"
               alt=""
+              aria-hidden="true"
               className="absolute bottom-4 left-20 w-4 h-4 opacity-30"
               style={{ animation: 'float 4s ease-in-out infinite 1s' }}
             />
             <img
               src="/retro-icons/star.svg"
               alt=""
+              aria-hidden="true"
               className="absolute bottom-8 right-8 w-4 h-4 opacity-30"
               style={{ animation: 'float 4s ease-in-out infinite 3s' }}
             />
@@ -70,6 +76,9 @@ export default function RootLayout({
                   VISITOR #{Math.floor(Math.random() * 900000 + 100000).toString().padStart(6, '0')}
                 </span>
               </div>
+              <p className="text-xs mt-4" style={{ color: '#555', fontFamily: 'monospace' }}>
+                ↑↑↓↓←→←→BA 🎮
+              </p>
             </div>
           </footer>
         </div>

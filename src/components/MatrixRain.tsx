@@ -43,8 +43,20 @@ export function MatrixRain({ isActive, onClose }: MatrixRainProps) {
 
     let animationId: number;
 
-    function draw() {
+    // Throttle to 30 FPS for better performance on mobile/low-end devices
+    const targetFPS = 30;
+    const frameInterval = 1000 / targetFPS;
+    let lastFrameTime = 0;
+
+    function draw(timestamp: number) {
       if (!ctx || !canvas) return;
+
+      // Throttle frame rate
+      if (timestamp - lastFrameTime < frameInterval) {
+        animationId = requestAnimationFrame(draw);
+        return;
+      }
+      lastFrameTime = timestamp;
 
       // Black background with transparency for trail effect
       ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
@@ -72,7 +84,7 @@ export function MatrixRain({ isActive, onClose }: MatrixRainProps) {
       animationId = requestAnimationFrame(draw);
     }
 
-    draw();
+    animationId = requestAnimationFrame(draw);
 
     // Handle ESC key to close
     const handleEscape = (e: KeyboardEvent) => {

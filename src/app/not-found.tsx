@@ -1,5 +1,25 @@
 import Link from 'next/link';
 
+{/*
+    ___  ___  _  _
+   / _ \/ _ \| || |
+  | | | | | | || |_
+  | |_| | |_|__   _|
+   \___/ \___/  |_|
+
+  ╭─────────────────────────────────────╮
+  │  You found the 404 Easter egg!      │
+  │                                     │
+  │  While you're here, try entering    │
+  │  the Konami code on the main site:  │
+  │  ↑ ↑ ↓ ↓ ← → ← → B A               │
+  │                                     │
+  │  Or visit /terminal for a surprise! │
+  │                                     │
+  │  - Francisco                        │
+  ╰─────────────────────────────────────╯
+*/}
+
 export default function NotFound() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-8">

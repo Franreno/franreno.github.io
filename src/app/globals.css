@@ -434,6 +434,15 @@ a:focus {
   }
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 /* Apply glow animation to special elements */
 .glow-pulse {
   animation: glow 2s ease-in-out infinite;
@@ -547,6 +556,70 @@ a:focus {
   body::before {
     background-size: 15px 15px;
   }
+}
+
+/* =============================================================================
+   NAVIGATION BUTTON STYLES
+   ============================================================================= */
+
+.nav-bar {
+  background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+  border-bottom: 3px solid #333333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  border: 2px solid #333333;
+  background: linear-gradient(180deg, #262626 0%, #1a1a1a 100%);
+  color: #b0b0b0;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3), -1px -1px 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  border-color: #00ffff;
+  color: #00ffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.nav-button-active {
+  border-color: #a855f7;
+  background: linear-gradient(180deg, #7c3aed 0%, #6d28d9 100%);
+  color: white;
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 12px rgba(168, 85, 247, 0.6);
+}
+
+.nav-button-active:hover {
+  border-color: #a855f7;
+  color: white;
+  text-shadow: none;
+  transform: none;
+}
+
+.nav-indicator {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.65rem;
+  color: #00ff41;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.8);
+  white-space: nowrap;
+  letter-spacing: 0.05em;
 }
 
 /* =============================================================================

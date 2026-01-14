@@ -1,4 +1,24 @@
 import { BootSequence } from '@/components/BootSequence';
+import Image from 'next/image';
+
+{/*
+██╗  ██╗███████╗██╗     ██╗      ██████╗
+██║  ██║██╔════╝██║     ██║     ██╔═══██╗
+███████║█████╗  ██║     ██║     ██║   ██║
+██╔══██║██╔══╝  ██║     ██║     ██║   ██║
+██║  ██║███████╗███████╗███████╗╚██████╔╝
+╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝
+
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░ YOU FOUND THE SECRET SOURCE CODE!     ░
+░ Welcome fellow developer/hacker!      ░
+░                                       ░
+░ This site was built with Next.js,     ░
+░ TypeScript, and a lot of Y2K love.    ░
+░                                       ░
+░ Say hi: work@franreno.com             ░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+*/}
 
 export default function Home() {
   return (
@@ -10,12 +30,14 @@ export default function Home() {
         <img
           src="/retro-icons/pixel-star.svg"
           alt=""
+          aria-hidden="true"
           className="float absolute top-0 left-0 w-8 h-8 opacity-50"
           style={{ animation: 'float 3s ease-in-out infinite' }}
         />
         <img
           src="/retro-icons/pixel-star.svg"
           alt=""
+          aria-hidden="true"
           className="float absolute top-0 right-0 w-8 h-8 opacity-50"
           style={{ animation: 'float 3s ease-in-out infinite 1.5s' }}
         />
@@ -39,14 +61,14 @@ export default function Home() {
                 border: '2px solid #666'
               }}
             >
-              <img
+              <Image
                 src="/pfp/cat_natal.png"
                 alt="Francisco Nogueira"
+                width={120}
+                height={120}
+                priority
                 className="float"
                 style={{
-                  width: '120px',
-                  height: '120px',
-                  display: 'block',
                   imageRendering: 'crisp-edges',
                   filter: 'contrast(1.1) saturate(1.2)',
                 }}
@@ -188,6 +210,7 @@ export default function Home() {
         <img
           src="/retro-icons/spinning-at.svg"
           alt=""
+          aria-hidden="true"
           className="absolute top-4 right-4 w-12 h-12 opacity-70"
         />
         <h2 className="text-3xl font-bold mb-6 neon-glow text-center">
