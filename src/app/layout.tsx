@@ -75,6 +75,19 @@ export default function RootLayout({
                 <span className="retro-badge">
                   VISITOR #{Math.floor(Math.random() * 900000 + 100000).toString().padStart(6, '0')}
                 </span>
+                <a
+                  href="/pgp.asc"
+                  className="retro-badge"
+                  style={{
+                    textDecoration: 'none',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease'
+                  }}
+                  title="Fingerprint: C70D 9E49 24F7 E3E7 076B C06E C2C4 14A0 03A4 EDA0"
+                  download
+                >
+                  🔐 PGP KEY
+                </a>
               </div>
               <p className="text-xs mt-4" style={{ color: '#555', fontFamily: 'monospace' }}>
                 ↑↑↓↓←→←→BA 🎮

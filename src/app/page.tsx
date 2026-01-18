@@ -241,8 +241,20 @@ export default function Home() {
           >
             💼 LinkedIn
           </a>
+          <a
+            href="/pgp.asc"
+            className="y2k-button"
+            download
+          >
+            🔐 PGP Key
+          </a>
         </div>
-        <div className="mt-8 text-center">
+        <div className="mt-6 text-center">
+          <p className="text-xs" style={{ color: '#666', fontFamily: 'monospace' }}>
+            PGP Fingerprint: <span className="terminal-text">C70D 9E49 24F7 E3E7 076B C06E C2C4 14A0 03A4 EDA0</span>
+          </p>
+        </div>
+        <div className="mt-4 text-center">
           <p className="text-sm terminal-text">
             {'> CONNECT_STATUS: [AWAITING_YOUR_MESSAGE]'}
           </p>
